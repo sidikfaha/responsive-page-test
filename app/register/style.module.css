@@ -1,0 +1,25 @@
+.steps {
+  counter-reset: item;
+  @apply flex justify-around items-center;
+  @apply py-5 relative;
+
+  & > li {
+    counter-increment: item;
+    @apply flex items-center text-neutral-400 text-xl;
+
+    &:before {
+      content: counter(item);
+      @apply mr-3;
+      @apply w-8 h-8 rounded-full flex justify-center items-center bg-neutral-400;
+      @apply text-white font-bold;
+    }
+  }
+}
+
+.activeStep {
+  @apply !text-white;
+
+  &:before {
+    @apply !bg-white !text-cyan-400;
+  }
+}
