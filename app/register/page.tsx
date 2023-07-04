@@ -280,7 +280,7 @@ export default function Register() {
             <footer className="flex justify-between items-center">
               <Button
                 type="button"
-                onClick={prev}
+                onClick={() => alert("There is no login page for the moment.")}
                 className="hover:bg-blue-100 text-blue-500"
               >
                 <IconArrowLeft /> Back to Login
